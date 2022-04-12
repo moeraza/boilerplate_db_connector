@@ -148,7 +148,7 @@ def df_to_s3(data_frame, csv_name, index, save_local, delimiter, verbose=True, *
 def delete_file(file_key):
     client = boto3.client('s3')
     resp = client.delete_object(
-        Bucket = 'razadatapresist',
+        Bucket = S3BUCKETNAME,
         Key=file_key)
     logging.info('File Deleted: {0}'.format(resp))
 
@@ -347,7 +347,7 @@ def execute_query_redshift(query_str):
 
 
 def pushtors(df, tbl_name, distkey, sortkey, append = True):
-    connect_to_redshift(dbname = REDSHIFT_DBNAME,
+    connect_to_redshift(dbname = REDSHIFT_DBNAME    ,
                     host = REDSHIFT_HOST,
                     port = REDSHIFT_PORT,
                     user = REDSHIFT_USER,
