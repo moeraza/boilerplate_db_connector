@@ -18,7 +18,7 @@ MYSQL_SSL_CA=MYSQL_SSL_CA
 os.environ['LIBMYSQL_ENABLE_CLEARTEXT_PLUGIN'] = '1'
 
 #gets the credentials from .aws/credentials
-session = boto3.Session(profile_name=MYSQL_BOTOPROFILENAME)
+session = boto3.Session(profile_name=BOTOPROFILENAME)
 client = session.client('rds')
 
 token = client.generate_db_auth_token(DBHostname=ENDPOINT, Port=PORT, DBUsername=USR, Region=REGION)
