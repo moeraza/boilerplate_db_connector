@@ -4,7 +4,6 @@ import boto3
 import os
 sys.path.append('..')
 import csv
-import core.secrets
 from datetime import datetime
 import pandas as pd
 from core.config.env import MYSQL_ENDPOINT, MYSQL_PORT, MYSQL_USR, MYSQL_REGION, MYSQL_DBNAME, MYSQL_PWD, MYSQL_SSL_CA, MYSQL_BOTOPROFILENAME

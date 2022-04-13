@@ -1,4 +1,3 @@
-from core.secrets import *
 from cassandra.cluster import Cluster, ExecutionProfile, EXEC_PROFILE_DEFAULT
 from cassandra.policies import DCAwareRoundRobinPolicy, TokenAwarePolicy
 from cassandra.auth import PlainTextAuthProvider
